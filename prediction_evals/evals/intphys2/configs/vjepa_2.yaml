@@ -2,7 +2,7 @@ nodes: 1
 tasks_per_node: 8
 tag: default
 eval_name: intphys2
-folder: /checkpoint/vjepa-2-h/
+folder: /data/kxzheng/models/checkpoint/vjepa-2-h #/checkpoint/vjepa-2-h/
 resume_checkpoint: false
 experiment:
   data:
@@ -17,7 +17,7 @@ experiment:
     dataset: intphys2-debug
   max_context_mode: true
 model_kwargs:
-  checkpoint: /checkpoint/vjepa-2-h/vith.pt
+  checkpoint: /data/kxzheng/models/checkpoint/vjepa-2-h/vith.pt # /checkpoint/vjepa-2-h/vith.pt
   module_name: app.vjepa.modelcustom.default_wrapper
   wrapper_kwargs:
     no_predictor: false

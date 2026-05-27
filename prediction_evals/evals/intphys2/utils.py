@@ -52,12 +52,11 @@ def slurm_account_partition_and_qos(low_pri: bool) -> str:
 # TODO: UPDATE PATHS BEFORE RELEASE
 DATASET_PATHS_BY_CLUSTER = {
     CLUSTER: {
-        'IntPhys2-debug': 'PATH_TO_DEBUG',
-        'IntPhys2-main': 'PATH_TO_MAIN',
-        'IntPhys2-heldout': 'PATH_TO_HELDOUT',
+        'IntPhys2-debug': '/data/kxzheng/data/IntPhys2/Debug',
+        'IntPhys2-main': '/data/kxzheng/data/IntPhys2/Main',
+        'IntPhys2-heldout': '/data/kxzheng/data/IntPhys2/HeldOut',
     },
 }
-
 
 
 def get_dataset_path(dataset: str, cluster=None) -> str:
