@@ -227,6 +227,15 @@ def extract_losses(
 
     loader = iter(data)
 
+    # logger.info(f"Using device: {device}")
+    # logger.info(f"CUDA available: {torch.cuda.is_available()}")
+    # logger.info(f"Current GPU: {torch.cuda.get_device_name(device)}")
+    # with open(f"/tmp/cuda_info_rank{rank}.txt", "w") as f:
+    #     f.write(f"Using device: {device}\n")
+    #     f.write(f"CUDA available: {torch.cuda.is_available()}\n")
+    #     f.write(f"Current GPU: {torch.cuda.get_device_name(device)}\n")
+    
+
     all_ids = []
     all_losses = []
 
