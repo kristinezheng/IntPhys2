@@ -7,6 +7,7 @@
 
 import os
 import copy
+from tqdm import tqdm
 
 # -- FOR DISTRIBUTED TRAINING ENSURE ONLY 1 DEVICE VISIBLE PER PROCESS
 try:
@@ -229,7 +230,10 @@ def extract_losses(
     all_ids = []
     all_losses = []
 
-    for i in range(len(loader)):
+    # for i in range(len(loader)):
+    # total = len(loader)
+    for i in tqdm(range(len(loader)), desc=f"Evaluating (rank {rank})", disable=(rank != 0)):
+        #logger.info(f"Video {i+1}/{total}")
         udata_labels = next(loader)
 
         id = udata_labels[1][0]
